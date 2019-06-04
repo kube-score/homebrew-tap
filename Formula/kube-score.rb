@@ -2,9 +2,9 @@
 class KubeScore < Formula
   desc ""
   homepage "https://kube-score.com/"
-  url "https://github.com/zegl/kube-score/releases/download/v0.7.0/kube-score_0.7.0_darwin_amd64.tar.gz"
-  version "0.7.0"
-  sha256 "a5432c0962b3168ea8ea1173cfba392b04bf74c05962b5d3153fd0b349f69bbe"
+  url "https://github.com/zegl/kube-score/releases/download/v0.7.1/kube-score_0.7.1_darwin_amd64.tar.gz"
+  version "0.7.1"
+  sha256 "2e4b2f60e77fef0173f377557e653b3d35ecf19d3e7e57c018b2f71c772debcc"
 
   def install
     bin.install "kube-score"
