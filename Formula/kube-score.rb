@@ -13,6 +13,6 @@ class KubeScore < Formula
   end
 
   def install
-    bin.install "program"
+    bin.install "kube-score"
   end
 end
