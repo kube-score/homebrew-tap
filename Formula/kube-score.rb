@@ -2,15 +2,15 @@
 class KubeScore < Formula
   desc ""
   homepage "https://kube-score.com/"
-  version "1.1.0"
+  version "1.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/zegl/kube-score/releases/download/v1.1.0/kube-score_1.1.0_darwin_amd64.tar.gz"
-    sha256 "479a3971def92c69afaccdb0ae0a84a50ceaa9a72c564596d1e611914bc85e7f"
+    url "https://github.com/zegl/kube-score/releases/download/v1.2.0/kube-score_1.2.0_darwin_amd64.tar.gz"
+    sha256 "5052afaa45275f14baeb77a3e0345967ed47f392b1a8291ec1545e724355230c"
   elsif OS.linux?
-    url "https://github.com/zegl/kube-score/releases/download/v1.1.0/kube-score_1.1.0_linux_amd64.tar.gz"
-    sha256 "d6741037440ab5f1fae8121f0d4723c3477fd10c145475dff20e51d39336c375"
+    url "https://github.com/zegl/kube-score/releases/download/v1.2.0/kube-score_1.2.0_linux_amd64.tar.gz"
+    sha256 "0dcde85f0fa50d0859184a2e01d025b8366cccf887d305cdac7a1902d3e86e5c"
   end
 
   def install
