@@ -2,7 +2,7 @@
 class KubeScore < Formula
   desc ""
   homepage "https://kube-score.com/"
-  version "1.7.0"
+  version "1.7.1"
   bottle :unneeded
 
   if OS.mac?
