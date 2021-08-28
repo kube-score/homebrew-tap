@@ -5,28 +5,24 @@
 class KubeScore < Formula
   desc ""
   homepage "https://kube-score.com/"
-  version "1.11.0"
+  version "1.12.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/zegl/kube-score/releases/download/v1.11.0/kube-score_1.11.0_darwin_amd64.tar.gz"
-    sha256 "cc5335b0a6e0445a6a3c618e70f933897f7a979673ff1d8c513aabb97a1b202d"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/zegl/kube-score/releases/download/v1.11.0/kube-score_1.11.0_darwin_arm64.tar.gz"
-    sha256 "14a5caca26f29b55f27c61dbdacd1a25d58572d0458b9fe8bd971d25671a4dcb"
+    url "https://github.com/zegl/kube-score/releases/download/v1.12.0/kube-score_1.12.0_darwin_amd64.tar.gz"
+    sha256 "05dc6fd29d51658a477f8d8ec9efa2d787a9e5e9d14fda6841aa431e3113d7f1"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/zegl/kube-score/releases/download/v1.11.0/kube-score_1.11.0_linux_amd64.tar.gz"
-    sha256 "976d0deb493c86dfa43ab41a2ac8f755a3a500b70d9cce2e728bb7c2e8c370b5"
+    url "https://github.com/zegl/kube-score/releases/download/v1.12.0/kube-score_1.12.0_linux_amd64.tar.gz"
+    sha256 "177d2b4e9f7ce3d82411560ac8289719684f1f73001c60be4b60c5b197120a09"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/zegl/kube-score/releases/download/v1.11.0/kube-score_1.11.0_linux_armv6.tar.gz"
-    sha256 "f487da46892a9da715fc02bfc1fd0d5deee77a22ee5fca7cf5bc6054aebdb402"
+    url "https://github.com/zegl/kube-score/releases/download/v1.12.0/kube-score_1.12.0_linux_armv6.tar.gz"
+    sha256 "a77948580f40f4a7583b1e14d383e3b521c4e1cd719377be56516dc0f6089a0f"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/zegl/kube-score/releases/download/v1.11.0/kube-score_1.11.0_linux_arm64.tar.gz"
-    sha256 "b25be63e9c5f86abbab380b24a7536817b1231727f44cb9aa81f272ca069131d"
+    url "https://github.com/zegl/kube-score/releases/download/v1.12.0/kube-score_1.12.0_linux_arm64.tar.gz"
+    sha256 "7edf5d025b3708f36120576ada04ce9f813c73d27c4d898b51a9b3aeac99655e"
   end
 
   def install
