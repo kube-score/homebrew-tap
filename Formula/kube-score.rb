@@ -5,24 +5,33 @@
 class KubeScore < Formula
   desc ""
   homepage "https://kube-score.com/"
-  version "1.12.0"
+  version "1.13.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/zegl/kube-score/releases/download/v1.12.0/kube-score_1.12.0_darwin_amd64.tar.gz"
-    sha256 "05dc6fd29d51658a477f8d8ec9efa2d787a9e5e9d14fda6841aa431e3113d7f1"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/zegl/kube-score/releases/download/v1.13.0/kube-score_1.13.0_darwin_arm64.tar.gz"
+      sha256 "2e9931abc3d07e68c1d4c9fcb9dc7d0bd8479f6626c71289b3c67cbc7dcd7e3b"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/zegl/kube-score/releases/download/v1.13.0/kube-score_1.13.0_darwin_amd64.tar.gz"
+      sha256 "5c3c26cfcd2a1351a25a362314027b3b447e4ec9028d9b171e98aaf609fcc20c"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/zegl/kube-score/releases/download/v1.12.0/kube-score_1.12.0_linux_amd64.tar.gz"
-    sha256 "177d2b4e9f7ce3d82411560ac8289719684f1f73001c60be4b60c5b197120a09"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/zegl/kube-score/releases/download/v1.12.0/kube-score_1.12.0_linux_armv6.tar.gz"
-    sha256 "a77948580f40f4a7583b1e14d383e3b521c4e1cd719377be56516dc0f6089a0f"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/zegl/kube-score/releases/download/v1.12.0/kube-score_1.12.0_linux_arm64.tar.gz"
-    sha256 "7edf5d025b3708f36120576ada04ce9f813c73d27c4d898b51a9b3aeac99655e"
+
+  on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/zegl/kube-score/releases/download/v1.13.0/kube-score_1.13.0_linux_armv6.tar.gz"
+      sha256 "d1167987652700eef449122564c59f851f7d80565fa62d8f1efdce8e490e8a96"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/zegl/kube-score/releases/download/v1.13.0/kube-score_1.13.0_linux_arm64.tar.gz"
+      sha256 "faf9f572fe17dd0bbe1acc6e480b9d1ba28a0360e481dc2d70ef40eaa0b9bda1"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/zegl/kube-score/releases/download/v1.13.0/kube-score_1.13.0_linux_amd64.tar.gz"
+      sha256 "e8b739c932ff8505ba80bb58e4e1a244c79caa9816f3db78171253634114c022"
+    end
   end
 
   def install
