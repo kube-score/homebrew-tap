@@ -6,7 +6,6 @@ class KubeScore < Formula
   desc ""
   homepage "https://kube-score.com/"
   version "1.13.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
