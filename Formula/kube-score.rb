@@ -5,20 +5,20 @@
 class KubeScore < Formula
   desc ""
   homepage "https://kube-score.com/"
-  version "1.17.0"
+  version "1.18.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/zegl/kube-score/releases/download/v1.17.0/kube-score_1.17.0_darwin_arm64.tar.gz"
-      sha256 "1cad44e7ea76e084db09d6e2dc06fbd0b2c325d4091eedf3f69354973b409066"
+      url "https://github.com/zegl/kube-score/releases/download/v1.18.0/kube-score_1.18.0_darwin_arm64.tar.gz"
+      sha256 "a0eae7ee4cb802ea3d0fba55baa861bbfdf13f2929e52f8542e8641d068a1f55"
 
       def install
         bin.install "kube-score"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zegl/kube-score/releases/download/v1.17.0/kube-score_1.17.0_darwin_amd64.tar.gz"
-      sha256 "6742e8a86272ccbb0202d88dad4b80530f44e9818add29385bcd0adea19433b1"
+      url "https://github.com/zegl/kube-score/releases/download/v1.18.0/kube-score_1.18.0_darwin_amd64.tar.gz"
+      sha256 "769daa94578fa6cd6553ec169b3f3fb74cf876f5c4c847b60c745f81da497dea"
 
       def install
         bin.install "kube-score"
@@ -28,24 +28,24 @@ class KubeScore < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/zegl/kube-score/releases/download/v1.17.0/kube-score_1.17.0_linux_armv6.tar.gz"
-      sha256 "b2a9b46c14c1d4bae6dc17f414dc46aae239c0cb18a2776ff97e3b80d8bd6448"
+      url "https://github.com/zegl/kube-score/releases/download/v1.18.0/kube-score_1.18.0_linux_armv6.tar.gz"
+      sha256 "bf1a15e0d27ed6ae4149a01b1222b63fd83587e4a4d727009f50f70295930959"
 
       def install
         bin.install "kube-score"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zegl/kube-score/releases/download/v1.17.0/kube-score_1.17.0_linux_arm64.tar.gz"
-      sha256 "103765bdb9d4c1e60a8281b04767880db319aafb2a2b7732d02e5eed56acefec"
+      url "https://github.com/zegl/kube-score/releases/download/v1.18.0/kube-score_1.18.0_linux_arm64.tar.gz"
+      sha256 "461c1d0df8074c6dbeb26302c47d802a0a17fa25c04ced8e9b807c2d9fb0b03a"
 
       def install
         bin.install "kube-score"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zegl/kube-score/releases/download/v1.17.0/kube-score_1.17.0_linux_amd64.tar.gz"
-      sha256 "98e07c784a7db03591d6d78b2d062eb5478c2942bc954e1960f43da84a69dfed"
+      url "https://github.com/zegl/kube-score/releases/download/v1.18.0/kube-score_1.18.0_linux_amd64.tar.gz"
+      sha256 "2f4c3a43045ac4006fa1adcf970660828d2df09c4e9165bafe27d36479fa355a"
 
       def install
         bin.install "kube-score"
